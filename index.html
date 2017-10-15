@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Shape Up or Shape Out</title>
+</head>
+<body id="bg">
+    <div class="row">   
+        <!-- INPUTS AND BUTTONS -->
+        <div class="col s3 input-field" id="left-container">
+            <!--WIDTH-->
+            <input type="text" name="width" placeholder="width value.." id="rec-width">
+            <!--HEIGHT-->
+            <input type="text" placeholder="height value.." id="rec-height">
+            <button id="btn1">Rectangle</button>
+            <!--RADIUS-->
+            <input type="text" placeholder="radius value.." id="cir-radius">
+            <button id="btn2">Circle</button>
+            <!--SIDE LENGTH-->
+            <input type="text" placeholder="side length value.." id="squa-sidelength">
+            <button id="btn3">Square</button>
+            <!--HEIGHT-->
+            <input type="text" placeholder="height value.." id="tri-height">
+            <button id="btn4">Triangle</button>
+        </div>
+
+        <!-- SHAPE DRAWER  -->
+        <div class="col s9" id="middle-container"></div>
+
+        <!-- SIDE PANEL -->
+        <div class="col s3" id="right-container">
+
+            <input type="text" placeholder="Shape Name" id="shape-name">
+            <input type="text" placeholder="Width" id="width">
+            <input type="text" placeholder="Height" id="heigh">
+            <input type="text" placeholder="Radius" id="shape-name">
+            <input type="text" placeholder="Area" id="shape-name">
+            <input type="text" placeholder="Perimeter" id="shape-name">
+
+        </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>     
+    <script type="text/javascript" src="script.js"></script>           
+</body>
+</html>

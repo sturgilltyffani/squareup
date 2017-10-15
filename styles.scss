@@ -1,0 +1,63 @@
+body, html {
+    height: 100%;
+}
+
+#bg {
+    background-image: url('https://i.ytimg.com/vi/vV6JpyUlLXc/maxresdefault.jpg')
+}
+
+// .input-field {
+//     :-webkit-input-placeholder white;
+//     border-radius: 5px;
+// }
+
+.input-field input[type=text].valid {
+    background-color: white;
+}
+
+
+#left-container {
+    padding-left: 2%;
+    padding-top: 8%;
+}
+
+#middle-container {
+    height: 600px;
+    width: 600px;
+    margin-top: 4%;
+    background-color: white;
+    border: solid;
+}
+
+#right-container {
+    padding-top: 8%;
+    padding-left: 2%;
+}
+
+#square {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+#rectangle {
+	width: 200px;
+	height: 100px;
+	background: green;
+}
+
+#circle {
+	width: 100px;
+	height: 100px;
+	background: purple;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+#triangle-bottomleft {
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid yellow;
+	border-right: 100px solid transparent;
+}
