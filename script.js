@@ -8,41 +8,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+// CONTAINERS
+var leftContainer = document.getElementById('left-container');
+var middleContainer = document.getElementById('middle-container');
+var rightContainer = document.getElementById('right-container');
+//INPUT IDS
+var recWidth = document.getElementById('rec-width');
+var recHeight = document.getElementById('rec-height');
+var cirRadius = document.getElementById('cir-radius');
+var squaSideLength = document.getElementById('squa-sidelength');
+var triHeight = document.getElementById('tri-height');
+//BUTTONS
 var recBtn = document.getElementById('btn1');
 var cirBtn = document.getElementById('btn2');
 var squBtn = document.getElementById('btn3');
 var triBtn = document.getElementById('btn4');
+//RANDOM
+function randomNumber(max, min) {
+    return Math.random() * (max - min) + min;
+}
+function randomPosition() {
+    return {
+        top: randomNumber(550, 1),
+        bottom: randomNumber(550, 1)
+    };
+}
 var Shape = /** @class */ (function () {
-    function Shape() {
+    function Shape(nameOfShape) {
+        var _this = this;
+        nameOfShape = nameOfShape;
+        this.div = document.createElement('div');
+        this.div.addEventListener('click', function () {
+            _this.show();
+        });
+        this.div.addEventListener('dblclick', function () {
+            _this.remove();
+        });
+        this.draw();
     }
+    Shape.prototype.draw = function () {
+        middleContainer.appendChild(this.div);
+        var position = randomPosition();
+    };
+    Shape.prototype.remove = function () {
+    };
+    Shape.prototype.show = function () {
+    };
     return Shape;
 }());
+//CIRCLE
 var Circle = /** @class */ (function (_super) {
     __extends(Circle, _super);
     function Circle() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this, 'Circle') || this;
+        _this.div.id = 'circle';
+        return _this;
     }
     return Circle;
 }(Shape));
+cirBtn.addEventListener('click', function () {
+    var circle = new Circle;
+    circle.draw();
+});
+//TRIANGLE
 var Triangle = /** @class */ (function (_super) {
     __extends(Triangle, _super);
     function Triangle() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this, 'Triangle') || this;
+        _this.div.id = 'triangle';
+        return _this;
     }
     return Triangle;
 }(Shape));
+triBtn.addEventListener('click', function () {
+    var triangle = new Triangle();
+    triangle.draw();
+});
+//RECTANGLE
 var Rectangle = /** @class */ (function (_super) {
     __extends(Rectangle, _super);
     function Rectangle() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this, 'Rectangle') || this;
+        _this.div.id = 'rectangle';
+        return _this;
     }
     return Rectangle;
 }(Shape));
+recBtn.addEventListener('click', function () {
+    var rectangle = new Rectangle;
+    rectangle.draw();
+});
+//SQUARE
 var Square = /** @class */ (function (_super) {
     __extends(Square, _super);
     function Square() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this, 'Square') || this;
+        _this.div.id = 'square';
+        return _this;
     }
     return Square;
 }(Shape));
-// SOS SOS SOS SOS 
+squBtn.addEventListener('click', function () {
+    var square = new Square;
+    square.draw();
+});
